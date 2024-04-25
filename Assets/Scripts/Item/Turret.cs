@@ -25,11 +25,8 @@ public class Turret : Item
     [SerializeField] private float radius;
     [SerializeField] private Vector2 targetVector;
     public LayerMask layerMask;
-    [SerializeField] private bool trackDelay;
-    [SerializeField] private Vector3 toEnemy;
 
-    [SerializeField] private AudioSource audio;
-    [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private GameObject target;
 
     public Turret()
     {
@@ -58,26 +55,11 @@ public class Turret : Item
             GameObject bullet = Instantiate(bulletPrefab, poolPosition, Quaternion.identity);
             bullet.SetActive(false);
             bulletPool.Enqueue(bullet);
-            toEnemy = Vector3.zero;
         }
-        trackDelay = false;
-        audio = GetComponent<AudioSource>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
     {
-        /*
-        Debug.Log(currentState);
-        
-        if(currentState == TurretState.Attacking)
-        {
-            spriteRenderer.color = Color.yellow;
-        }
-        else
-        {
-            spriteRenderer.color = Color.white;
-        }*/
 
         switch (currentState)
         {
@@ -100,31 +82,25 @@ public class Turret : Item
 
         if (circleHit.collider != null && GameManager.Instance.InCamera(circleHit.collider.gameObject))
         {
-            targetVector = (circleHit.collider.transform.position - transform.position).normalized;
+            target = circleHit.collider.gameObject;
+            //targetVector = (circleHit.collider.transform.position - transform.position).normalized;
             ChangeState(TurretState.Tracking);
         }
     }
 
-    private IEnumerator TrackDelaycoroutine()
-    {
-        yield return new WaitForSeconds(0.2f);
-        trackDelay = false;
-    }
-
     private void Track()
     {
-        //Idle상태에서 검출한 적을 향해 바로 직선ray를 쏜다. ray는 계속 적을 추적한다.
-        RaycastHit2D linearHit = Physics2D.Raycast(transform.position, targetVector, radius, layerMask);
-        Debug.DrawRay(transform.position, targetVector * radius, Color.white);
-
-        //적을 추적하는 직선 Ray와 포신의 방향이 어느정도 같아질때까지 포신을 돌리며 적을 추격한다.
-        //1. 직선 Ray와 포신의 방향 각도 계산
-        //2. 차이가 있으면 돌린다.
-        //
-        //Debug.DrawRay(transform.position, transform.GetChild(0).up * radius, Color.red);
-        if (linearHit.collider != null)
+        Debug.DrawRay(transform.position, transform.GetChild(0).up * radius, Color.red);
+        RaycastHit2D barrelHit = Physics2D.Raycast(transform.position, transform.GetChild(0).up, radius, layerMask);
+        
+        if (target != null)
         {
-            targetVector = (linearHit.collider.transform.position - transform.position).normalized;
+            if(barrelHit.collider != null)
+            {
+                target = barrelHit.collider.gameObject;
+            }
+
+            targetVector = (target.transform.position - transform.position).normalized;
 
             Quaternion deltaRotation = Quaternion.FromToRotation(Vector3.up, targetVector);
             if (deltaRotation.z > transform.GetChild(0).rotation.z + 0.005f)
@@ -137,11 +113,10 @@ public class Turret : Item
             }
             else
             {
-                Debug.Log("Track에서 Idle로");
                 ChangeState(TurretState.Attacking);
             }
         }
-        else    //만약 적방향 ray에 검출이 null이면 다시 Idle이 된다.
+        else    
         {
             ChangeState(TurretState.Idle);
         }
@@ -168,7 +143,6 @@ public class Turret : Item
 
             currentBullet++;
         }
-        //audio.Play();
         SoundManager.instance.PlaySound("Turret");
         yield return new WaitForSeconds(bulletDelay);
 
@@ -179,14 +153,9 @@ public class Turret : Item
     {
         Debug.DrawRay(transform.position, transform.GetChild(0).up * radius, Color.red);
         RaycastHit2D barrelHit = Physics2D.Raycast(transform.position, transform.GetChild(0).up, radius, layerMask);
-        /*
-        Debug.Log("검출한거" + barrelHit.collider.gameObject.name);
-        Debug.Log("barrelHit.collider == null: " + (barrelHit.collider == null));
-        Debug.Log("barrelHit.collider.gameObject == null: " + (barrelHit.collider.gameObject == null));
-        */
+
         if (barrelHit.collider == null)
         {
-            Debug.Log("Attack에서 Idle로!");
             ChangeState(TurretState.Idle);
             return;
         }
@@ -194,6 +163,7 @@ public class Turret : Item
         {
             StartCoroutine(AttackCoroutine());
         }
+        ChangeState(TurretState.Tracking);
         
     }
 
