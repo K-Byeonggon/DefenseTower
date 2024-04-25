@@ -1,0 +1,455 @@
+fileFormatVersion: 2
+guid: 9b8b580f76f5648449964df6c4ed4241
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Custom_Edited_-_Kirby_Customs_-_Sword_Knight-removebg-preview_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 77
+        width: 28
+        height: 24
+      alignment: 9
+      pivot: {x: 0.3973677, y: 0.41666666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70913ca087c7282478ebe09989df1b85
+      internalID: -1635724840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom_Edited_-_Kirby_Customs_-_Sword_Knight-removebg-preview_1
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 77
+        width: 32
+        height: 24
+      alignment: 9
+      pivot: {x: 0.38676965, y: 0.41666666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d75edff80b2ae342ba10508680b8ba6
+      internalID: -453942089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom_Edited_-_Kirby_Customs_-_Sword_Knight-removebg-preview_2
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 77
+        width: 29
+        height: 24
+      alignment: 9
+      pivot: {x: 0.40090653, y: 0.41666666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a67b2986fe3046f4f8ea2af8f5521c1a
+      internalID: 901904305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom_Edited_-_Kirby_Customs_-_Sword_Knight-removebg-preview_3
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 77
+        width: 32
+        height: 24
+      alignment: 9
+      pivot: {x: 0.32820225, y: 0.41666666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5690fd3536c1a5645b82e17438661672
+      internalID: -350461024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom_Edited_-_Kirby_Customs_-_Sword_Knight-removebg-preview_4
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 77
+        width: 20
+        height: 26
+      alignment: 9
+      pivot: {x: 0.55622405, y: 0.3846154}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea616dc85991b4b46b54b45508daade9
+      internalID: -1823405027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom_Edited_-_Kirby_Customs_-_Sword_Knight-removebg-preview_5
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 77
+        width: 19
+        height: 26
+      alignment: 9
+      pivot: {x: 0.5723347, y: 0.3846154}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b539f0a8ba478dd4ca3598b4373d2123
+      internalID: -1868692069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom_Edited_-_Kirby_Customs_-_Sword_Knight-removebg-preview_6
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 39
+        width: 27
+        height: 24
+      alignment: 9
+      pivot: {x: 0.63882613, y: 0.41666666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44c8f8646b2eb9d4baf2252d48e1cf2e
+      internalID: -1070085703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom_Edited_-_Kirby_Customs_-_Sword_Knight-removebg-preview_7
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 38
+        width: 24
+        height: 33
+      alignment: 9
+      pivot: {x: 0.5624717, y: 0.3030303}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 527ba2311b2ad0f47ab6247ac55508f7
+      internalID: 485662999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom_Edited_-_Kirby_Customs_-_Sword_Knight-removebg-preview_8
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 39
+        width: 34
+        height: 34
+      alignment: 9
+      pivot: {x: 0.32360885, y: 0.29411766}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80440572b6d4eda4c8d1c25e141f6840
+      internalID: -1124170770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom_Edited_-_Kirby_Customs_-_Sword_Knight-removebg-preview_10
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 36
+        width: 55
+        height: 28
+      alignment: 9
+      pivot: {x: 0.19999999, y: 0.46428573}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 277acf1f7307da0438a2e7a79259e430
+      internalID: 341634619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom_Edited_-_Kirby_Customs_-_Sword_Knight-removebg-preview_12
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 38
+        width: 36
+        height: 24
+      alignment: 9
+      pivot: {x: 0.29176033, y: 0.41666666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82842aa9e0ec16444a7c077994e0bb46
+      internalID: 1271940779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom_Edited_-_Kirby_Customs_-_Sword_Knight-removebg-preview_13
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 33
+        width: 25
+        height: 29
+      alignment: 9
+      pivot: {x: 0.5699652, y: 0.44827586}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 456a86dd16dd48e4bb1a777f65ef3937
+      internalID: 317056836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom_Edited_-_Kirby_Customs_-_Sword_Knight-removebg-preview_14
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 38
+        width: 23
+        height: 24
+      alignment: 9
+      pivot: {x: 0.5325934, y: 0.41666666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c910535b3a6efa24b9fd15efe1bc2571
+      internalID: -1246337754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom_Edited_-_Kirby_Customs_-_Sword_Knight-removebg-preview_15
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 5
+        width: 23
+        height: 27
+      alignment: 9
+      pivot: {x: 0.5434585, y: 0.37037036}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a51c84adb719c224b979b891456155bc
+      internalID: 535831074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Custom_Edited_-_Kirby_Customs_-_Sword_Knight-removebg-preview_16
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 3
+        width: 32
+        height: 24
+      alignment: 9
+      pivot: {x: 0.2891575, y: 0.41666666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c61ebe9ce67003b48aa41b855c2d9b45
+      internalID: 1655442591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Custom_Edited_-_Kirby_Customs_-_Sword_Knight-removebg-preview_0: -1635724840
+      Custom_Edited_-_Kirby_Customs_-_Sword_Knight-removebg-preview_1: -453942089
+      Custom_Edited_-_Kirby_Customs_-_Sword_Knight-removebg-preview_10: 341634619
+      Custom_Edited_-_Kirby_Customs_-_Sword_Knight-removebg-preview_11: -1728540695
+      Custom_Edited_-_Kirby_Customs_-_Sword_Knight-removebg-preview_12: 1271940779
+      Custom_Edited_-_Kirby_Customs_-_Sword_Knight-removebg-preview_13: 317056836
+      Custom_Edited_-_Kirby_Customs_-_Sword_Knight-removebg-preview_14: -1246337754
+      Custom_Edited_-_Kirby_Customs_-_Sword_Knight-removebg-preview_15: 535831074
+      Custom_Edited_-_Kirby_Customs_-_Sword_Knight-removebg-preview_16: 1655442591
+      Custom_Edited_-_Kirby_Customs_-_Sword_Knight-removebg-preview_2: 901904305
+      Custom_Edited_-_Kirby_Customs_-_Sword_Knight-removebg-preview_3: -350461024
+      Custom_Edited_-_Kirby_Customs_-_Sword_Knight-removebg-preview_4: -1823405027
+      Custom_Edited_-_Kirby_Customs_-_Sword_Knight-removebg-preview_5: -1868692069
+      Custom_Edited_-_Kirby_Customs_-_Sword_Knight-removebg-preview_6: -1070085703
+      Custom_Edited_-_Kirby_Customs_-_Sword_Knight-removebg-preview_7: 485662999
+      Custom_Edited_-_Kirby_Customs_-_Sword_Knight-removebg-preview_8: -1124170770
+      Custom_Edited_-_Kirby_Customs_-_Sword_Knight-removebg-preview_9: -1547307255
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

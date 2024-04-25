@@ -1,0 +1,871 @@
+fileFormatVersion: 2
+guid: 0c9f449d2c150fa428cff44c9485bc91
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: redBatMoveAttackDie_1280x450_8x5_-removebg-preview_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 257
+        width: 90
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cac758afddaf5a540a01353bdbbe0f60
+      internalID: -708281260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redBatMoveAttackDie_1280x450_8x5_-removebg-preview_1
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 253
+        width: 89
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70163dbc111a11b4abcca5cd3abd82cd
+      internalID: 850707515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redBatMoveAttackDie_1280x450_8x5_-removebg-preview_2
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 247
+        width: 90
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5098ed6cb9ad1a4682d44f539c45b8e
+      internalID: -152006963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redBatMoveAttackDie_1280x450_8x5_-removebg-preview_3
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 247
+        width: 86
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41e1a36870441bc47b84a44cbc254c35
+      internalID: 1857138459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redBatMoveAttackDie_1280x450_8x5_-removebg-preview_4
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 244
+        width: 80
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 399e90b7519edcf48ac9806855191cd7
+      internalID: 2141393407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redBatMoveAttackDie_1280x450_8x5_-removebg-preview_5
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 237
+        width: 90
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ac06ca33e777c544ad6ac0ab70ed84d
+      internalID: 914944593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redBatMoveAttackDie_1280x450_8x5_-removebg-preview_6
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 257
+        width: 90
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1566edf64a8fe446a9f8603d4757033
+      internalID: -37865097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redBatMoveAttackDie_1280x450_8x5_-removebg-preview_7
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 253
+        width: 83
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06223dc9e8020f94a90a2db05a0fb676
+      internalID: 674726457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redBatMoveAttackDie_1280x450_8x5_-removebg-preview_8
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 197
+        width: 90
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc11bebf7474e4a49a1faa2430e7bf33
+      internalID: 576242429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redBatMoveAttackDie_1280x450_8x5_-removebg-preview_9
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 194
+        width: 90
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddcf6bb36ac2a5e47887bf9e0f63e866
+      internalID: -1322656396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redBatMoveAttackDie_1280x450_8x5_-removebg-preview_10
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 188
+        width: 90
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13d3fe3ee7eb1e8488b4113b3d99e610
+      internalID: -418204496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redBatMoveAttackDie_1280x450_8x5_-removebg-preview_11
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 188
+        width: 86
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ae69ff94f1c54449805da9fed3e5b04
+      internalID: 1940396737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redBatMoveAttackDie_1280x450_8x5_-removebg-preview_12
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 184
+        width: 80
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d751a25eb988be14eac5201f634b6d27
+      internalID: 451410514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redBatMoveAttackDie_1280x450_8x5_-removebg-preview_13
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 178
+        width: 90
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8837a68cfedae7d42a4219987726880f
+      internalID: 1436151762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redBatMoveAttackDie_1280x450_8x5_-removebg-preview_14
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 197
+        width: 89
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2060d78fe374094b9a8c05762518707
+      internalID: 442838252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redBatMoveAttackDie_1280x450_8x5_-removebg-preview_15
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 194
+        width: 83
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b129a1d9457c2904cacf4421d749442d
+      internalID: 1028908346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redBatMoveAttackDie_1280x450_8x5_-removebg-preview_16
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 124
+        width: 80
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fc08e268fe233c47876f860d21f1ce6
+      internalID: 1040300824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redBatMoveAttackDie_1280x450_8x5_-removebg-preview_17
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 124
+        width: 73
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bed07f439049134fae2c6c659886290
+      internalID: -1775098626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redBatMoveAttackDie_1280x450_8x5_-removebg-preview_18
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 124
+        width: 60
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 339ff58ed80eadc43bdf151df7f1781b
+      internalID: -1368308206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redBatMoveAttackDie_1280x450_8x5_-removebg-preview_19
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 118
+        width: 61
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4b3f5e291901e745ab2aa49536e74d5
+      internalID: 1293943521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redBatMoveAttackDie_1280x450_8x5_-removebg-preview_20
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 124
+        width: 60
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b50de43bfef628d42b854d731b91d427
+      internalID: -1334645205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redBatMoveAttackDie_1280x450_8x5_-removebg-preview_21
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 124
+        width: 57
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ca2bbe6d7ecbbf4dbaea3b5ed539861
+      internalID: 973177168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redBatMoveAttackDie_1280x450_8x5_-removebg-preview_22
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 124
+        width: 67
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eeafd38eb526c84d98f31afa2613af4
+      internalID: -909356538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redBatMoveAttackDie_1280x450_8x5_-removebg-preview_23
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 121
+        width: 90
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a0bdfb3e60369d4d8c51479a95bcfe5
+      internalID: 2127442978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redBatMoveAttackDie_1280x450_8x5_-removebg-preview_24
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 65
+        width: 80
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b578a4777c443a54e99fee60c0357755
+      internalID: -359389662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redBatMoveAttackDie_1280x450_8x5_-removebg-preview_25
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 65
+        width: 74
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be71c2f4bf925694ba54043866f07c33
+      internalID: 1309487493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redBatMoveAttackDie_1280x450_8x5_-removebg-preview_26
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 65
+        width: 60
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 118dae7a6248d944f86320eb589c5e7c
+      internalID: 947545589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redBatMoveAttackDie_1280x450_8x5_-removebg-preview_27
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 59
+        width: 60
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f91ac0124404d84b8017158bce22c9b
+      internalID: -284621997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redBatMoveAttackDie_1280x450_8x5_-removebg-preview_28
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 65
+        width: 61
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc86ab35bc6258a4c84cebb40dd309d6
+      internalID: -321385852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redBatMoveAttackDie_1280x450_8x5_-removebg-preview_29
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 65
+        width: 57
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73a5855cdea45e5439c72fcaca42af1e
+      internalID: 74474229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redBatMoveAttackDie_1280x450_8x5_-removebg-preview_30
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 65
+        width: 67
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0902000883dd5fe4b8de8ea01495d294
+      internalID: 966243622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redBatMoveAttackDie_1280x450_8x5_-removebg-preview_31
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 61
+        width: 90
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38ce98d712e1a844ebbc168131c54407
+      internalID: 530852131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redBatMoveAttackDie_1280x450_8x5_-removebg-preview_32
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 12
+        width: 90
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3aadc2fd3d168247bba020e95344fd5
+      internalID: 1325616027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: redBatMoveAttackDie_1280x450_8x5_-removebg-preview_33
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 12
+        width: 90
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e982357de575e34cbb80e58dfa9778d
+      internalID: -480876951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      redBatMoveAttackDie_1280x450_8x5_-removebg-preview_0: -708281260
+      redBatMoveAttackDie_1280x450_8x5_-removebg-preview_1: 850707515
+      redBatMoveAttackDie_1280x450_8x5_-removebg-preview_10: -418204496
+      redBatMoveAttackDie_1280x450_8x5_-removebg-preview_11: 1940396737
+      redBatMoveAttackDie_1280x450_8x5_-removebg-preview_12: 451410514
+      redBatMoveAttackDie_1280x450_8x5_-removebg-preview_13: 1436151762
+      redBatMoveAttackDie_1280x450_8x5_-removebg-preview_14: 442838252
+      redBatMoveAttackDie_1280x450_8x5_-removebg-preview_15: 1028908346
+      redBatMoveAttackDie_1280x450_8x5_-removebg-preview_16: 1040300824
+      redBatMoveAttackDie_1280x450_8x5_-removebg-preview_17: -1775098626
+      redBatMoveAttackDie_1280x450_8x5_-removebg-preview_18: -1368308206
+      redBatMoveAttackDie_1280x450_8x5_-removebg-preview_19: 1293943521
+      redBatMoveAttackDie_1280x450_8x5_-removebg-preview_2: -152006963
+      redBatMoveAttackDie_1280x450_8x5_-removebg-preview_20: -1334645205
+      redBatMoveAttackDie_1280x450_8x5_-removebg-preview_21: 973177168
+      redBatMoveAttackDie_1280x450_8x5_-removebg-preview_22: -909356538
+      redBatMoveAttackDie_1280x450_8x5_-removebg-preview_23: 2127442978
+      redBatMoveAttackDie_1280x450_8x5_-removebg-preview_24: -359389662
+      redBatMoveAttackDie_1280x450_8x5_-removebg-preview_25: 1309487493
+      redBatMoveAttackDie_1280x450_8x5_-removebg-preview_26: 947545589
+      redBatMoveAttackDie_1280x450_8x5_-removebg-preview_27: -284621997
+      redBatMoveAttackDie_1280x450_8x5_-removebg-preview_28: -321385852
+      redBatMoveAttackDie_1280x450_8x5_-removebg-preview_29: 74474229
+      redBatMoveAttackDie_1280x450_8x5_-removebg-preview_3: 1857138459
+      redBatMoveAttackDie_1280x450_8x5_-removebg-preview_30: 966243622
+      redBatMoveAttackDie_1280x450_8x5_-removebg-preview_31: 530852131
+      redBatMoveAttackDie_1280x450_8x5_-removebg-preview_32: 1325616027
+      redBatMoveAttackDie_1280x450_8x5_-removebg-preview_33: -480876951
+      redBatMoveAttackDie_1280x450_8x5_-removebg-preview_4: 2141393407
+      redBatMoveAttackDie_1280x450_8x5_-removebg-preview_5: 914944593
+      redBatMoveAttackDie_1280x450_8x5_-removebg-preview_6: -37865097
+      redBatMoveAttackDie_1280x450_8x5_-removebg-preview_7: 674726457
+      redBatMoveAttackDie_1280x450_8x5_-removebg-preview_8: 576242429
+      redBatMoveAttackDie_1280x450_8x5_-removebg-preview_9: -1322656396
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

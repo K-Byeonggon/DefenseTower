@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - OneWayPlatform
+  - Tower
+  - Monster
+  - Bullet
+  - Platform
+  - EnemyBullet
+  - Gun
+  - Item
+  - Block
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Tower
+  - OneWayPlatform
+  - Monster
+  - Player
+  - Turret
+  - Block
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: BackBackground
+    uniqueID: 1899871705
+    locked: 0
+  - name: Background
+    uniqueID: 4026621673
+    locked: 0
+  - name: Middleground
+    uniqueID: 902645929
+    locked: 0
+  - name: Foreground
+    uniqueID: 2739113419
+    locked: 0
