@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEngine.UI.Image;
 using StateEnums;
 public class Banshee : MonoBehaviour
 {
@@ -35,7 +34,6 @@ public class Banshee : MonoBehaviour
 
     private bool isDead = false;
 
-    [SerializeField] private AudioSource audio;
 
     private void OnEnable()
     {
@@ -68,10 +66,10 @@ public class Banshee : MonoBehaviour
         for (int i = 0; i < bulletCount; i++) 
         {
             GameObject bullet = Instantiate(bansheeBullet, poolPoint, Quaternion.identity);
+            bullet.GetComponent<BansheeBullet>().banshee = gameObject;
             bullet.SetActive(false);
             bulletPool.Enqueue(bullet);
         }
-        audio = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -116,7 +114,6 @@ public class Banshee : MonoBehaviour
         bullet.SetActive(true);
         bullet.transform.position = transform.position;
         currentBulletCount++;
-        //audio.Play();
         SoundManager.instance.PlaySound("howl");
         yield return new WaitForSeconds(attackDelay);
         attacking = false;

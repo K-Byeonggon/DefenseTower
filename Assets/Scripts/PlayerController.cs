@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -22,7 +20,6 @@ public class PlayerController : MonoBehaviour
     private PlayerInput playerInput;
     private Rigidbody2D playerRigidbody;
 
-    private AudioSource jumpAudio;
 
     private void Start()
     {
@@ -30,7 +27,6 @@ public class PlayerController : MonoBehaviour
         playerRigidbody = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
-        jumpAudio = transform.GetChild(1).GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -59,10 +55,8 @@ public class PlayerController : MonoBehaviour
     {
         bool isSkeyPressed = playerInput.actions["Down"].ReadValue<float>() > 0;
 
-        Debug.Log("ÁøÂ¥ jumpForce: " + jumpForce);
         if (inputValue.Get() != null && jumpCount < 2 && !isSkeyPressed)
         {
-            //jumpAudio.Play();
             SoundManager.instance.PlaySound("Jump");
             jumpCount++;
             playerRigidbody.velocity = Vector2.zero;

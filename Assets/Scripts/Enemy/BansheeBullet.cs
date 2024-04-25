@@ -68,30 +68,20 @@ public class BansheeBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Monster")
+        if (collision.tag == "Player" && !PlayerOnHitManager.instance.onHitHandled) 
         {
-            if (banshee == null) { banshee = collision.gameObject; }
-        }
-        if (collision.tag == "Player") 
-        {
-            if(!collision.gameObject.GetComponent<PlayerHp>().invincible)
-            {
-                gameObject.SetActive(false);
-                banshee.GetComponent<Banshee>().currentBulletCount--;
-                collision.gameObject.GetComponent<PlayerHp>().hp -= damage;
-            }
+            gameObject.SetActive(false);
+            banshee.GetComponent<Banshee>().currentBulletCount--;
+            collision.gameObject.GetComponent<PlayerHp>().hp -= damage;
         }
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.tag == "Player" && !PlayerOnHitManager.instance.onHitHandled)
         {
-            if (!collision.gameObject.GetComponent<PlayerHp>().invincible)
-            {
-                gameObject.SetActive(false);
-                banshee.GetComponent<Banshee>().currentBulletCount--;
-                collision.gameObject.GetComponent<PlayerHp>().hp -= damage;
-            }
+            gameObject.SetActive(false);
+            banshee.GetComponent<Banshee>().currentBulletCount--;
+            collision.gameObject.GetComponent<PlayerHp>().hp -= damage;
         }
     }
 }

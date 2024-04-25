@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4689814064872950057}
   - component: {fileID: -224655121637089200}
   - component: {fileID: 8365655652850742358}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: BansheeNormalBullet
   m_TagString: EnemyBullet
   m_Icon: {fileID: 0}
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1555853877
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 1828885817, guid: ecb0a9f0c42f5f44aa833aa5effb607e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

@@ -25,7 +25,6 @@ public class Gun : Item
     [SerializeField] protected bool isCoroutine = false;
     [SerializeField] private int currentBullet;
 
-    [SerializeField] private AudioSource audio;
 
     public Gun()
     {
@@ -54,7 +53,6 @@ public class Gun : Item
             bulletPool.Enqueue(bullet);
         }
         muzzleAnimator = transform.GetChild(0).GetComponent<Animator>();
-        audio = GetComponent<AudioSource>();
     }
 
 
@@ -99,7 +97,6 @@ public class Gun : Item
         }
 
         muzzleAnimator.SetTrigger("onFire");
-        //audio.Play();
         PlayFireSound();
         yield return new WaitForSeconds(bulletDelay);
 

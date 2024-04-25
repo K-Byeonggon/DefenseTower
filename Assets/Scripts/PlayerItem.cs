@@ -17,6 +17,7 @@ public class PlayerItem : MonoBehaviour
         inventoryIndex = 0;
         inventory = new List<GameObject>();
         itemSprites = new List<Sprite>();
+        AddItem(ItemManager.Instance.itemPrefabs[3]);
     }
 
     public void EquipItem()

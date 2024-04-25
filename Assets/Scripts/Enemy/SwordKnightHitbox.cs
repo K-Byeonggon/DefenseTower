@@ -15,11 +15,8 @@ public class SwordKnightHitbox : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            if (!collision.gameObject.GetComponent<PlayerHp>().invincible)
-            {
-                gameObject.SetActive(false);
-                collision.gameObject.GetComponent<PlayerHp>().hp -= damage;
-            }
+            gameObject.SetActive(false);
+            collision.gameObject.GetComponent<PlayerHp>().hp -= damage;
         }
         else if (collision.tag == "Tower")
         {
