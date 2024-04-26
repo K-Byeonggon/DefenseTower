@@ -2740,6 +2740,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b27ae2bf8d55ba7428d0a4086b03201d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  invincibleTime: 2
+  flickeringDelay: 0.2
+  onHitHandled: 0
+  playerStuned: 0
+  playerFainted: 0
+  stunTime: 0.7
+  faintTime: 2
+  player: {fileID: 791296633}
+  playerSprite: {fileID: 0}
+  playerRigidbody: {fileID: 0}
 --- !u!4 &618535985
 Transform:
   m_ObjectHideFlags: 0

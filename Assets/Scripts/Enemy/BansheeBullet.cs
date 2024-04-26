@@ -68,7 +68,9 @@ public class BansheeBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player" && !PlayerOnHitManager.instance.onHitHandled) 
+        if (PlayerOnHitManager.instance.onHitHandled) return;
+
+        if (collision.tag == "Player") 
         {
             gameObject.SetActive(false);
             banshee.GetComponent<Banshee>().currentBulletCount--;
@@ -77,7 +79,9 @@ public class BansheeBullet : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.tag == "Player" && !PlayerOnHitManager.instance.onHitHandled)
+        if (PlayerOnHitManager.instance.onHitHandled) return;
+
+        if (collision.tag == "Player")
         {
             gameObject.SetActive(false);
             banshee.GetComponent<Banshee>().currentBulletCount--;

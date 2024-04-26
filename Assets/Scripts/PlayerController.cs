@@ -40,7 +40,15 @@ public class PlayerController : MonoBehaviour
 
     private void OnMove(InputValue inputValue)
     {
-        inputVector = inputValue.Get<Vector2>();
+        if(PlayerOnHitManager.instance.playerStuned || PlayerOnHitManager.instance.playerFainted)
+        {
+            inputVector = Vector2.zero;
+            return;
+        }
+        else
+        {
+            inputVector = inputValue.Get<Vector2>();
+        }
         if (inputValue.Get<Vector2>().x > 0)
         {
             spriteRenderer.flipX = false;
@@ -54,6 +62,11 @@ public class PlayerController : MonoBehaviour
     private void OnJump(InputValue inputValue)
     {
         bool isSkeyPressed = playerInput.actions["Down"].ReadValue<float>() > 0;
+
+        if(PlayerOnHitManager.instance.playerStuned || PlayerOnHitManager.instance.playerFainted)
+        {
+            return;
+        }
 
         if (inputValue.Get() != null && jumpCount < 2 && !isSkeyPressed)
         {
@@ -72,6 +85,7 @@ public class PlayerController : MonoBehaviour
     {
         animator.SetBool("isJumping", isJumping);
         animator.SetBool("isRunning", isRunning);
+        animator.SetBool("isStuned", PlayerOnHitManager.instance.playerFainted);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

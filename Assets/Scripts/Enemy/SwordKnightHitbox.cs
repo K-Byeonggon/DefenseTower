@@ -24,5 +24,4 @@ public class SwordKnightHitbox : MonoBehaviour
             GameManager.Instance.SetTowerHp(-damage);
         }
     }
-
 }

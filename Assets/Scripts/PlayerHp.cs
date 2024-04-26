@@ -49,46 +49,27 @@ public class PlayerHp : MonoBehaviour
         SetHpBar();
     }
 
-
-    private IEnumerator HitStunCoroutine()
-    {
-        SoundManager.instance.PlaySound("hitPlayer");
-        controller.Attacked = true;
-        controller.MoveSpeed = 0f;
-        yield return new WaitForSeconds(0.7f);
-        controller.Attacked = false;
-        controller.MoveSpeed = 10f;
-    }
-
-    private IEnumerator StunCoroutine()
-    {
-        SoundManager.instance.PlaySound("hitPlayer");
-        gameObject.layer = LayerMask.NameToLayer("Invincible");
-        controller.Attacked = true;
-        controller.MoveSpeed = 0f;
-        controller.JumpForce = 0f;
-        animator.SetBool("isStuned", true);
-        yield return new WaitForSeconds(3f);
-        hp = maxHp;
-        animator.SetBool("isStuned", false);
-        controller.Attacked = false;
-        controller.MoveSpeed = 10f;
-        controller.JumpForce = 800f;
-        controller.JumpCount = 0;
-        Debug.Log(controller.JumpForce);
-        StartCoroutine(DamagedCoroutine());
-    }
-
     public void SetEventHandled()
     {
         eventHandled = false;
+    }
+
+    private IEnumerator SetFaintRecovery()
+    {
+        yield return new WaitForSeconds(PlayerOnHitManager.instance.faintTime);
+        hp = maxHp;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "EnemyBullet")
         {
-
+            PlayerOnHitManager.instance.OnHit(collision);
+            if (hp <= 0)
+            {
+                PlayerOnHitManager.instance.Faint();
+                StartCoroutine(SetFaintRecovery());
+            }
         }
     }
 
@@ -96,7 +77,12 @@ public class PlayerHp : MonoBehaviour
     {
         if (collision.tag == "EnemyBullet")
         {
-
+            PlayerOnHitManager.instance.OnHit(collision);
+            if (hp <= 0)
+            {
+                PlayerOnHitManager.instance.Faint();
+                StartCoroutine(SetFaintRecovery());
+            }
         }
     }
 }
