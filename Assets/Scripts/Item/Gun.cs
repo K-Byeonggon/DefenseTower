@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using StateEnums;
 
 public class Gun : Item
 {
@@ -66,7 +67,7 @@ public class Gun : Item
         
             if (inputValue.Get() != null)
             {
-                if (!GameManager.Instance.isUnboxing && !GameManager.Instance.isPaused) isFiring = true;
+                if (GameManager.Instance.currentState == GameState.InWave && !GameManager.Instance.isPaused) isFiring = true;
             }
             else
             {

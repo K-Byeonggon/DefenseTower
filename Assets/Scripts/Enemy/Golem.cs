@@ -151,7 +151,6 @@ public class Golem : MonoBehaviour
     {
         if (!isDead)
         {
-            GameManager.Instance.defeatedEnemyCount++;
             collider.enabled = false;
             rigidbody.gravityScale = 0;
             isDead = true;

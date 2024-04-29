@@ -50,4 +50,17 @@ public class SpawnManager : Singleton<SpawnManager>
             }
         }
     }
+
+    public bool CheckActiveMonster()
+    {
+        for(int i = 0; i < transform.childCount; i++)
+        {
+            for(int k = 0; k < transform.GetChild(i).childCount; k++)
+            {
+                if (transform.GetChild(i).GetChild(k).gameObject.activeSelf) return true;
+            }
+        }
+        return false;
+    }
+
 }

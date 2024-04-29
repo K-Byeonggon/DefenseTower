@@ -142,8 +142,6 @@ public class SwordKnight : MonoBehaviour
     {
         if (!isDead)
         {
-            GameManager.Instance.defeatedEnemyCount++;
-            
             collider.enabled = false;
             Vector2 knockback = -rayVector * 100f + Vector2.up * 200;
             rigidbody.AddForce(knockback);

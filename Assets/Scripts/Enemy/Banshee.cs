@@ -129,7 +129,6 @@ public class Banshee : MonoBehaviour
     {
         if (!isDead)
         {
-            GameManager.Instance.defeatedEnemyCount++;
             isDead = true;
         }
         collider.enabled = false;

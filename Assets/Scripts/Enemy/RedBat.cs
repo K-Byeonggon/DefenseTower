@@ -123,7 +123,6 @@ public class RedBat : MonoBehaviour
     {
         if (!isDead)
         {
-            GameManager.Instance.defeatedEnemyCount++;
             isDead = true;
         }
         collider.enabled = false;
@@ -183,7 +182,6 @@ public class RedBat : MonoBehaviour
             SoundManager.instance.PlaySound("hitMonster");
             Color newColor = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, 0f);
             spriteRenderer.color = newColor;
-            GameManager.Instance.defeatedEnemyCount++;
             GameManager.Instance.SetTowerHp(-damage);
             StartCoroutine(BoomCoroutine());
         }

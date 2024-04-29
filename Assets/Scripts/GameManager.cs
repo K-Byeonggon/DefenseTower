@@ -2,39 +2,27 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using StateEnums;
+
 public class GameManager : Singleton<GameManager>
 {
-    public bool isGameOver;
-    public bool isGameWin;
-    public bool isWaveClear;
-    public bool isUnboxing;
-    public int currentWave = 1;
-    public int winWave = 3;
+    public GameState currentState;
     public Camera mainCamera;
     public float towerMaxHp = 500;
-    public float towerHp;
-    public int defeatedEnemyCount;
-
-    //UI활성화용 bool 변수
-    public bool waveCleared;
-
-    //MonsterSpawner에서 이 변수가 false일때 현재 웨이브의 몬스터를 스폰함.
-    public bool waveStarted;
-
+    public float towerHp = 500;
+    public int winWave = 2;
     public bool isPaused;
+    public bool isCoroutine = false;
+    public GameObject itemBox;
 
     private void Start()
     {
-        isUnboxing = false;
-        isGameWin = false;
-        isGameOver = false;
-        isWaveClear = false;
-        waveStarted = false;
-        waveCleared = false;
-        towerHp = towerMaxHp;
-        defeatedEnemyCount = 0;
+        currentState = GameState.InWave;
+
         isPaused = false;
 
+        towerMaxHp = 500;
+        towerHp = towerMaxHp;
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
@@ -46,15 +34,8 @@ public class GameManager : Singleton<GameManager>
     private void SetDefault()
     {
         mainCamera = Camera.main;
-        isGameOver = false;
-        isGameWin = false;
-        isWaveClear = false;
-        waveStarted = false;
-        waveCleared = false;
-        isUnboxing = false;
         towerHp = towerMaxHp;
-        defeatedEnemyCount = 0;
-        currentWave = 1;
+        currentState = GameState.InWave;
     }
 
 
@@ -70,62 +51,100 @@ public class GameManager : Singleton<GameManager>
         else return true;
     }
 
-    private IEnumerator NextWaveCoroutine()
-    {
-        isWaveClear = false;
-        defeatedEnemyCount = 0;
-        currentWave++;
-        yield return new WaitForSeconds(3f);
-        waveStarted = false;
 
+    private void Update()
+    {
+        //일시 정지
+        if(isPaused) Time.timeScale = 0f;
+        else Time.timeScale = 1f;
+
+        Debug.Log(currentState);
+        switch(currentState)
+        {
+            case GameState.InWave:
+                InWave();
+                break;
+            case GameState.WaveCleared:
+                WaveCleared();
+                break;
+            case GameState.UnBoxing:
+                UnBoxing();
+                break;
+            case GameState.GameWin:
+                GameWin(); break;
+            case GameState.GameLose:
+                GameLose(); break;
+
+        }
+    }
+
+    public void ChangeState(GameState newState)
+    {
+        currentState = newState;
+    }
+
+    public void InWave()
+    {
+        itemBox.SetActive(false);
+
+        Debug.Log(WaveManager.Instance.currentWave);
+        if (towerHp <= 0)
+        {
+            ChangeState(GameState.GameLose);
+        }
+        if (WaveManager.Instance.waveCleared)
+        {
+            if (WaveManager.Instance.currentWave == winWave)
+            {
+                Debug.Log("게임 승리 상태");
+                ChangeState(GameState.GameWin);
+            }
+            else
+            {
+                Debug.Log("웨이브 클리어 상태");
+                WaveManager.Instance.currentWave++;
+                ChangeState(GameState.WaveCleared);
+            }
+        }
+    }
+
+    private IEnumerator WaveClearCoroutine()
+    {
+        isCoroutine = true;
+        yield return new WaitForSeconds(3f);
+        WaveManager.Instance.checkMonster = false;
+        WaveManager.Instance.waveCleared = false;
+        WaveManager.Instance.waveStarted = false;
+        ChangeState(GameState.UnBoxing);
+        isCoroutine = false;
+
+    }
+    public void WaveCleared()
+    {
+        if(!isCoroutine) StartCoroutine(WaveClearCoroutine());
+    }
+
+    public void UnBoxing()
+    {
+        itemBox.SetActive(true);
     }
 
     private IEnumerator WinCoroutine()
     {
+        isCoroutine = true;
         yield return new WaitForSeconds(5f);
         SceneManager.LoadScene("Title");
+        isCoroutine = false;
     }
 
-    private void Update()
+    public void GameWin()
     {
-        if(isPaused)
-        {
-            Time.timeScale = 0f;
-        }
-        else
-        {
-            Time.timeScale = 1f;
-        }
+        if(!isCoroutine) { StartCoroutine(WinCoroutine()); }
+    }
 
-        if (towerHp <= 0 && !isGameOver)
-        {
-            isGameOver = true;
-        }
-
-        else if(!isWaveClear)
-        {
-            isWaveClear = true;
-            waveCleared = true;
-            if (currentWave == winWave) //웨이브 클리어 했는데 마지막 웨이브 였음.
-            {
-                if (!isGameWin)
-                {
-                    Debug.Log("이겼다!");
-                    isGameWin = true;
-                    StartCoroutine(WinCoroutine());
-                }
-            }
-            else    //웨이브 클리어 했는데 마지막 웨이브는 아니었음.
-            {
-                Debug.Log("웨이브 클리어");
-                isUnboxing = true;  //상자까야지.
-            }
-        }
-
-        if(isWaveClear && !isUnboxing && !isGameWin)  //웨이브도 끝난 상태고 박스도 깠으면
-        {
-            StartCoroutine(NextWaveCoroutine());
-        }
+    public void GameLose()
+    {
+        
     }
 
     public void SetTowerHp(float delta)
@@ -133,18 +152,12 @@ public class GameManager : Singleton<GameManager>
         towerHp += delta;
     }
 
-    public void WaveUp()
-    {
-        currentWave++;
-    }
-
     private void OnPause(InputValue inputValue)
     {
         if (inputValue.Get() != null)
         {
-            Debug.Log("눌림!");
-            if (isPaused) { Debug.Log("해제!"); isPaused = false; }
-            else { Debug.Log("시간정지!"); isPaused = true; }
+            if (isPaused) { isPaused = false; }
+            else { isPaused = true; }
         }
     }
 

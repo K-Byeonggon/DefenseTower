@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
+using StateEnums;
 
 public class BoxUIManager : MonoBehaviour
 {
@@ -10,24 +11,12 @@ public class BoxUIManager : MonoBehaviour
     public List<int> itemNums;
     public int[] itemNumsInBox;
     public GameObject player;
-    public bool unboxing;
 
-    private void Start()
-    {
-        unboxing = false;
-    }
 
-    private void Update()
+    private void OnEnable()
     {
-        if (GameManager.Instance.isUnboxing)
-        {
-            if(!unboxing)
-            {
-                unboxing = true;
-                Get3ItemNums();
-                SetItemInfo();
-            }
-        }
+        Get3ItemNums();
+        SetItemInfo();
     }
 
     //모든 아이템 풀에서 같은 확률로 중복없이 3종의 아이템 번호 담음.
@@ -64,8 +53,7 @@ public class BoxUIManager : MonoBehaviour
         if(item.tag == "Gun") player.GetComponent<Player>().AddItem(item);
         else if(item.tag == "Item") player.GetComponent<PlayerItem>().AddItem(item);
 
-        GameManager.Instance.isUnboxing = false;
-        unboxing = false;
+        GameManager.Instance.ChangeState(GameState.InWave);
         gameObject.SetActive(false);
     }
 }

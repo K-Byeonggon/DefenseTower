@@ -4,6 +4,15 @@ using UnityEngine;
 
 namespace StateEnums
 {
+    public enum GameState
+    {
+        InWave,
+        WaveCleared,
+        UnBoxing,
+        GameWin,
+        GameLose
+    }
+
     public enum RedBatState
     {
         Moving,
@@ -54,3 +63,4 @@ namespace Monsters
         Golem
     }
 }
+
