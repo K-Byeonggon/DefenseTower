@@ -2761,6 +2761,7 @@ MonoBehaviour:
   maxMonsterNum: 
   checkTiming: 0
   checkMonster: 0
+  waveStarted: 0
   waveCleared: 0
 --- !u!4 &587847047
 Transform:
@@ -5212,7 +5213,6 @@ MonoBehaviour:
   waveClearUI: {fileID: 1900382169}
   winUI: {fileID: 934040997}
   gameOverUI: {fileID: 644594713}
-  itemBox: {fileID: 1521518723}
   boxUI: {fileID: 524057148}
   pauseUI: {fileID: 1014607749}
   TestUI: {fileID: 0}

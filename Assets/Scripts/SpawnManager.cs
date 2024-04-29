@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.Http.Headers;
 using UnityEngine;
 
 public class SpawnManager : Singleton<SpawnManager>
@@ -7,20 +8,10 @@ public class SpawnManager : Singleton<SpawnManager>
     public GameObject[] monsterPrefabs;
     public Queue<GameObject>[] monsterPools;
     public int[] poolSizes;
-    private void Start()
-    {
-        monsterPools = new Queue<GameObject>[monsterPrefabs.Length];
-        for (int index = 0; index < monsterPools.Length; index++)
-        {
-            monsterPools[index] = new Queue<GameObject>();
-        }
-
-        poolSizes = new int[monsterPrefabs.Length];
-
-    }
 
     public void countMaxMonster()
     {
+        poolSizes = new int[monsterPrefabs.Length];
         foreach (WaveInfo wave in WaveManager.Instance.waves)
         {
             int[] monsterNum = new int[monsterPrefabs.Length];
@@ -31,6 +22,9 @@ public class SpawnManager : Singleton<SpawnManager>
 
             for (int i = 0; i < monsterNum.Length; i++)
             {
+                Debug.Log("뭔일이야");
+                Debug.Log("풀 " + poolSizes.Length);
+                Debug.Log("넘 " + monsterNum.Length);
                 if (poolSizes[i] < monsterNum[i]) poolSizes[i] = monsterNum[i];
             }
         }
@@ -39,6 +33,12 @@ public class SpawnManager : Singleton<SpawnManager>
 
     public void Pooling()
     {
+        monsterPools = new Queue<GameObject>[monsterPrefabs.Length];
+        for (int index = 0; index < monsterPools.Length; index++)
+        {
+            monsterPools[index] = new Queue<GameObject>();
+        }
+
         for (int i = 0; i < poolSizes.Length; i++)
         {
             for (int k = 0; k < poolSizes[i]; k++)

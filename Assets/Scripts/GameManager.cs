@@ -10,7 +10,7 @@ public class GameManager : Singleton<GameManager>
     public Camera mainCamera;
     public float towerMaxHp = 500;
     public float towerHp = 500;
-    public int winWave = 2;
+    public int winWave = 1;
     public bool isPaused;
     public bool isCoroutine = false;
     public GameObject itemBox;
