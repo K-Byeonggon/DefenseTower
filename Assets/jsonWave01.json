@@ -1,0 +1,14 @@
+{
+  "wave": [
+    {
+      "time": 0,
+      "point": 0,
+      "name": "Swordknight"
+    },
+    {
+      "time": 3,
+      "point": 1,
+      "name": "Banshee"
+    }
+  ]
+}

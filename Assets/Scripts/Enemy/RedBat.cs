@@ -162,12 +162,12 @@ public class RedBat : MonoBehaviour
                 break;
         }
     }
-
+    /*
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, radius);
-    }
+    }*/
 
     private IEnumerator BoomCoroutine()
     {

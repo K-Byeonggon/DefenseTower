@@ -20,6 +20,9 @@ public class Player : MonoBehaviour
         gunAxis = transform.GetChild(0);
         AddItem(ItemManager.Instance.itemPrefabs[0]);
         EquipItem(inventory[inventoryIndex]);
+        AddItem(ItemManager.Instance.itemPrefabs[1]);
+        AddItem(ItemManager.Instance.itemPrefabs[2]);
+
     }
 
     public void EquipItem(GameObject gameObject)

@@ -102,7 +102,7 @@ public class GameManager : Singleton<GameManager>
             isGameOver = true;
         }
 
-        else if(defeatedEnemyCount == WaveManager.Instance.enemyCounts[currentWave] && !isWaveClear)
+        else if(!isWaveClear)
         {
             isWaveClear = true;
             waveCleared = true;

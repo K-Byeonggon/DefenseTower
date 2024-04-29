@@ -48,9 +48,9 @@ namespace Monsters
 {
     public enum MonsterName
     {
-        RedBat,
-        Banshee,
         SwordKnight,
+        Banshee,
+        RedBat,
         Golem
     }
 }

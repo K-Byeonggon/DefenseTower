@@ -1,0 +1,19 @@
+{
+  "wave": [
+    {
+      "time": 0,
+      "point": 3,
+      "name": "Golem"
+    },
+    {
+      "time": 2,
+      "point": 2,
+      "name": "RedBat"
+    },
+    {
+      "time": 4,
+      "point": 0,
+      "name": "Swordknight"
+    }
+  ]
+}
