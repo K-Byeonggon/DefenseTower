@@ -4,14 +4,15 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using StateEnums;
-public class UIManager : MonoBehaviour 
+
+public class UIManager : MonoBehaviour
 {
     public GameObject waveClearUI;
     public GameObject winUI;
     public GameObject gameOverUI;
     public GameObject boxUI;
     public GameObject pauseUI;
-    public GameObject TestUI;
+    public GameObject itemBox;
 
     private void Start()
     {
@@ -34,5 +35,7 @@ public class UIManager : MonoBehaviour
         else {  waveClearUI.SetActive(false); }
         if(GameManager.Instance.isPaused) { pauseUI.SetActive(true); }
         else { pauseUI.SetActive(false); }
+        if(GameManager.Instance.currentState == GameState.UnBoxing) { itemBox.SetActive(true); }
+        else { itemBox.SetActive(false); }
     }
 }

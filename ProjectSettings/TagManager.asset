@@ -13,6 +13,7 @@ TagManager:
   - Gun
   - Item
   - Block
+  - Pool
   layers:
   - Default
   - TransparentFX

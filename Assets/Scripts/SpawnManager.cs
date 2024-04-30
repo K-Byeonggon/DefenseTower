@@ -2,12 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Net.Http.Headers;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SpawnManager : Singleton<SpawnManager>
 {
     public GameObject[] monsterPrefabs;
     public Queue<GameObject>[] monsterPools;
     public int[] poolSizes;
+    public GameObject monsterPool;
+
+    private void Start()
+    {
+        monsterPool = GameObject.FindWithTag("Pool");
+        if (monsterPool != null) Debug.Log("찾음");
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name == "SampleScene") SetDefault();
+    }
+
+    private void SetDefault()
+    {
+        monsterPool = GameObject.FindWithTag("Pool");
+    }
 
     public void countMaxMonster()
     {
@@ -22,9 +41,6 @@ public class SpawnManager : Singleton<SpawnManager>
 
             for (int i = 0; i < monsterNum.Length; i++)
             {
-                Debug.Log("뭔일이야");
-                Debug.Log("풀 " + poolSizes.Length);
-                Debug.Log("넘 " + monsterNum.Length);
                 if (poolSizes[i] < monsterNum[i]) poolSizes[i] = monsterNum[i];
             }
         }
@@ -45,7 +61,7 @@ public class SpawnManager : Singleton<SpawnManager>
             {
                 GameObject monster = Instantiate(monsterPrefabs[i], new Vector3(0, -10, 0), Quaternion.identity);
                 monster.SetActive(false);
-                monster.transform.parent = transform.GetChild(i);
+                monster.transform.parent = monsterPool.transform.GetChild(i);
                 monsterPools[i].Enqueue(monster);
             }
         }
@@ -57,10 +73,9 @@ public class SpawnManager : Singleton<SpawnManager>
         {
             for(int k = 0; k < transform.GetChild(i).childCount; k++)
             {
-                if (transform.GetChild(i).GetChild(k).gameObject.activeSelf) return true;
+                if (monsterPool.transform.GetChild(i).GetChild(k).gameObject.activeSelf) return true;
             }
         }
         return false;
     }
-
 }

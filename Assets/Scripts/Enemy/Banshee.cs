@@ -9,7 +9,7 @@ public class Banshee : MonoBehaviour
 
     public float radius = 4f;
     public LayerMask layerMask;
-    [SerializeField] private GameObject target;
+    public GameObject target;
 
     public GameObject bansheeBullet;
     private Queue<GameObject> bulletPool;
@@ -53,7 +53,6 @@ public class Banshee : MonoBehaviour
 
     private void Start()
     {
-        target = GameObject.FindGameObjectWithTag("Player");
         rigidbody = GetComponent<Rigidbody2D>();
         collider = GetComponent<Collider2D>();
         animator = GetComponent<Animator>();
@@ -68,6 +67,7 @@ public class Banshee : MonoBehaviour
             GameObject bullet = Instantiate(bansheeBullet, poolPoint, Quaternion.identity);
             bullet.GetComponent<BansheeBullet>().banshee = gameObject;
             bullet.SetActive(false);
+            bullet.transform.parent = transform.parent;
             bulletPool.Enqueue(bullet);
         }
     }

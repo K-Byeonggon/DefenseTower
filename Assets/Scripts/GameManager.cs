@@ -10,10 +10,10 @@ public class GameManager : Singleton<GameManager>
     public Camera mainCamera;
     public float towerMaxHp = 500;
     public float towerHp = 500;
-    public int winWave = 1;
+    public int winWave = 0;
     public bool isPaused;
     public bool isCoroutine = false;
-    public GameObject itemBox;
+    public bool isGameOver = false;
 
     private void Start()
     {
@@ -28,7 +28,7 @@ public class GameManager : Singleton<GameManager>
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        SetDefault();
+        if(scene.name == "SampleScene") SetDefault();
     }
 
     private void SetDefault()
@@ -36,6 +36,8 @@ public class GameManager : Singleton<GameManager>
         mainCamera = Camera.main;
         towerHp = towerMaxHp;
         currentState = GameState.InWave;
+        isCoroutine = false;
+        isGameOver = false;
     }
 
 
@@ -58,18 +60,15 @@ public class GameManager : Singleton<GameManager>
         if(isPaused) Time.timeScale = 0f;
         else Time.timeScale = 1f;
 
-        Debug.Log(currentState);
+        //Debug.Log(currentState);
         switch(currentState)
         {
             case GameState.InWave:
-                InWave();
-                break;
+                InWave(); break;
             case GameState.WaveCleared:
-                WaveCleared();
-                break;
+                WaveCleared(); break;
             case GameState.UnBoxing:
-                UnBoxing();
-                break;
+                UnBoxing(); break;
             case GameState.GameWin:
                 GameWin(); break;
             case GameState.GameLose:
@@ -85,15 +84,15 @@ public class GameManager : Singleton<GameManager>
 
     public void InWave()
     {
-        itemBox.SetActive(false);
-
-        Debug.Log(WaveManager.Instance.currentWave);
         if (towerHp <= 0)
         {
             ChangeState(GameState.GameLose);
+            return;
         }
         if (WaveManager.Instance.waveCleared)
         {
+            Debug.Log("curWave: " + WaveManager.Instance.currentWave);
+            Debug.Log("winWave: " + winWave);
             if (WaveManager.Instance.currentWave == winWave)
             {
                 Debug.Log("게임 승리 상태");
@@ -126,7 +125,7 @@ public class GameManager : Singleton<GameManager>
 
     public void UnBoxing()
     {
-        itemBox.SetActive(true);
+
     }
 
     private IEnumerator WinCoroutine()
@@ -139,12 +138,12 @@ public class GameManager : Singleton<GameManager>
 
     public void GameWin()
     {
-        if(!isCoroutine) { StartCoroutine(WinCoroutine()); }
+        if(!isCoroutine) { isCoroutine = true; StartCoroutine(WinCoroutine()); }
     }
 
     public void GameLose()
     {
-        
+        if (!isGameOver) { isGameOver = true; }
     }
 
     public void SetTowerHp(float delta)

@@ -17,7 +17,7 @@ public class MonsterSpawner : MonoBehaviour
 
     private void Update()
     {
-        if(GameManager.Instance.currentState == GameState.InWave)
+        if (GameManager.Instance.currentState == GameState.InWave)
         {
             if (!WaveManager.Instance.waveStarted) { WaveManager.Instance.waveStarted = true; StartWave(); }
         }
@@ -28,8 +28,8 @@ public class MonsterSpawner : MonoBehaviour
     {
         int currentWaveIndex = WaveManager.Instance.currentWave;
         WaveInfo currentWave = WaveManager.Instance.waves[currentWaveIndex];
-        WaveManager.Instance.checkTiming = currentWave.wave[currentWave.wave.Count-1].time;
-        foreach(SpawnInfo spawn in currentWave.wave)
+        WaveManager.Instance.checkTiming = currentWave.wave[currentWave.wave.Count - 1].time;
+        foreach (SpawnInfo spawn in currentWave.wave)
         {
             StartCoroutine(SpawnCoroutine(spawn.time, spawn.point, spawn.name));
         }
@@ -45,12 +45,11 @@ public class MonsterSpawner : MonoBehaviour
     private IEnumerator SpawnCoroutine(float time, int point, string name)
     {
         yield return new WaitForSeconds(time);
-        GameObject monster =  SpawnManager.Instance.monsterPools[monsterIndex[name]].Dequeue();
-        SpawnManager.Instance.monsterPools[monsterIndex[name]].Enqueue(monster);
+        GameObject monster = WaveManager.Instance.monsterPools[monsterIndex[name]].Dequeue();
+        WaveManager.Instance.monsterPools[monsterIndex[name]].Enqueue(monster);
+        Debug.Log(monster == null);
         monster.SetActive(true);
         monster.transform.position = transform.GetChild(point).position;
     }
-
-
 
 }

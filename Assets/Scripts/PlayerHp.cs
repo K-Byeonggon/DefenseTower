@@ -7,15 +7,7 @@ public class PlayerHp : MonoBehaviour
 {
     public float maxHp = 50;
     public float hp = 50;
-    private SpriteRenderer spriteRenderer;
-    private Rigidbody2D rigidbody;
-    private PlayerController controller;
-    private Animator animator;
     public Slider hpBar;
-
-    [SerializeField] private float invincibleTime = 2f;
-    [SerializeField] private float flickeringDelay = 0.2f;
-
 
     public bool eventHandled = false;
 
@@ -35,10 +27,6 @@ public class PlayerHp : MonoBehaviour
 
     private void Start()
     {
-        animator = GetComponent<Animator>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        rigidbody = GetComponent<Rigidbody2D>();
-        controller = gameObject.GetComponent<PlayerController>();
         hpBar.maxValue = maxHp;
         hpBar.value = hp;
         hp = maxHp;

@@ -11,13 +11,12 @@ public class ItemBox : MonoBehaviour
     private void OnEnable()
     {
         boxOpened = false;
-        if (animator != null) animator.SetBool("isOpened", boxOpened);
+        transform.position = Vector3.zero;
     }
 
     private void Start()
     {
         transform.position = Vector3.zero;
-        animator = GetComponent<Animator>();
         boxOpened = false;
     }
 
@@ -27,9 +26,8 @@ public class ItemBox : MonoBehaviour
         {
             Debug.Log("ºÎ‹HÈû!");
             if (!boxOpened) 
-            { 
+            {
                 boxOpened = true;
-                animator.SetBool("isOpened", boxOpened);
                 boxUI.SetActive(true);
             }
         }

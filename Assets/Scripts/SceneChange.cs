@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class SceneChange : MonoBehaviour
 {
-    private bool isCoroutine;
     private float initialYpos;
     public float frequency = 0.5f; // 사인 곡선의 주파수 (주기의 역수)
     public float amplitude = 20f; // 사인 곡선의 진폭
@@ -15,10 +14,9 @@ public class SceneChange : MonoBehaviour
 
     private float elapsedTime = 0f; // 경과 시간
     private float turnTime = 0f;
-    private bool turning = false;
+
     private void Start()
     {
-        isCoroutine = false;
         initialYpos = transform.position.y;
     }
 

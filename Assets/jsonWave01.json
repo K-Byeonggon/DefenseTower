@@ -7,8 +7,128 @@
     },
     {
       "time": 3,
+      "point": 0,
+      "name": "Swordknight"
+    },
+    {
+      "time": 6,
+      "point": 0,
+      "name": "Swordknight"
+    },
+    {
+      "time": 9,
+      "point": 0,
+      "name": "Swordknight"
+    },
+    {
+      "time": 12,
+      "point": 0,
+      "name": "Swordknight"
+    },
+    {
+      "time": 0,
       "point": 1,
       "name": "Banshee"
+    },
+    {
+      "time": 5,
+      "point": 1,
+      "name": "Banshee"
+    },
+    {
+      "time": 10,
+      "point": 1,
+      "name": "Banshee"
+    },
+    {
+      "time": 20,
+      "point": 3,
+      "name": "Swordknight"
+    },
+    {
+      "time": 23,
+      "point": 3,
+      "name": "Swordknight"
+    },
+    {
+      "time": 26,
+      "point": 3,
+      "name": "Swordknight"
+    },
+    {
+      "time": 29,
+      "point": 3,
+      "name": "Swordknight"
+    },
+    {
+      "time": 32,
+      "point": 3,
+      "name": "Swordknight"
+    },
+    {
+      "time": 20,
+      "point": 2,
+      "name": "Banshee"
+    },
+    {
+      "time": 25,
+      "point": 2,
+      "name": "Banshee"
+    },
+    {
+      "time": 30,
+      "point": 2,
+      "name": "Banshee"
+    },
+    {
+      "time": 40,
+      "point": 0,
+      "name": "Swordknight"
+    },
+    {
+      "time": 43,
+      "point": 0,
+      "name": "Swordknight"
+    },
+    {
+      "time": 46,
+      "point": 0,
+      "name": "Swordknight"
+    },
+    {
+      "time": 40,
+      "point": 1,
+      "name": "Banshee"
+    },
+    {
+      "time": 45,
+      "point": 1,
+      "name": "Banshee"
+    },
+    {
+      "time": 40,
+      "point": 2,
+      "name": "Banshee"
+    },
+    {
+      "time": 45,
+      "point": 2,
+      "name": "Banshee"
+    },
+    {
+      "time": 40,
+      "point": 3,
+      "name": "Swordknight"
+    },
+    {
+      "time": 43,
+      "point": 3,
+      "name": "Swordknight"
+    },
+    {
+      "time": 46,
+      "point": 3,
+      "name": "Swordknight"
     }
   ]
 }
