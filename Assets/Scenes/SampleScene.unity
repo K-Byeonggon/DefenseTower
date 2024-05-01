@@ -2768,12 +2768,6 @@ MonoBehaviour:
   checkMonster: 0
   waveStarted: 0
   waveCleared: 0
-  monsterPrefabs:
-  - {fileID: 6687047280954722372, guid: 05a5a20d9ba41774abbbe91e8d79a8de, type: 3}
-  - {fileID: 4267453875211819783, guid: 7ae9917de3fe24841b6c1d795ef1e840, type: 3}
-  - {fileID: 5510424382920812562, guid: 520f2b27feb36324ab6fe6c0eccbf25c, type: 3}
-  - {fileID: 98023060073809973, guid: 46d4c175b40c1404eb5a1e4a3be0c80d, type: 3}
-  poolSizes: 
   monsterPool: {fileID: 0}
 --- !u!4 &587847047
 Transform:
@@ -4384,7 +4378,7 @@ MonoBehaviour:
   mainCamera: {fileID: 519420031}
   towerMaxHp: 500
   towerHp: 0
-  winWave: 0
+  winWave: 2
   isPaused: 0
   isCoroutine: 0
   isGameOver: 0
@@ -7934,6 +7928,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b7774cc35d17fd4faec3784a7df8df4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  monsterPrefabs:
+  - {fileID: 6687047280954722372, guid: 05a5a20d9ba41774abbbe91e8d79a8de, type: 3}
+  - {fileID: 4267453875211819783, guid: 7ae9917de3fe24841b6c1d795ef1e840, type: 3}
+  - {fileID: 5510424382920812562, guid: 520f2b27feb36324ab6fe6c0eccbf25c, type: 3}
+  - {fileID: 98023060073809973, guid: 46d4c175b40c1404eb5a1e4a3be0c80d, type: 3}
+  poolSizes: 
+  monsterPool: {fileID: 0}
 --- !u!1 &1574897789
 GameObject:
   m_ObjectHideFlags: 0

@@ -31,7 +31,11 @@ public class UIManager : MonoBehaviour
         else { gameOverUI.SetActive(false); }
         if(GameManager.Instance.currentState == GameState.GameWin) { winUI.SetActive(true); }
         else {  winUI.SetActive(false); }
-        if(GameManager.Instance.currentState == GameState.WaveCleared){ waveClearUI.SetActive(true); }
+        if(GameManager.Instance.currentState == GameState.WaveCleared)
+        {
+            waveClearUI.transform.GetChild(0).GetComponent<Text>().text = string.Format("Wave {0:D2} Clear", WaveManager.Instance.currentWave); 
+                waveClearUI.SetActive(true); 
+        }
         else {  waveClearUI.SetActive(false); }
         if(GameManager.Instance.isPaused) { pauseUI.SetActive(true); }
         else { pauseUI.SetActive(false); }

@@ -10,7 +10,7 @@ public class GameManager : Singleton<GameManager>
     public Camera mainCamera;
     public float towerMaxHp = 500;
     public float towerHp = 500;
-    public int winWave = 0;
+    public int winWave = 2;
     public bool isPaused;
     public bool isCoroutine = false;
     public bool isGameOver = false;
@@ -38,6 +38,7 @@ public class GameManager : Singleton<GameManager>
         currentState = GameState.InWave;
         isCoroutine = false;
         isGameOver = false;
+        isCoroutine = false;
     }
 
 
@@ -133,7 +134,6 @@ public class GameManager : Singleton<GameManager>
         isCoroutine = true;
         yield return new WaitForSeconds(5f);
         SceneManager.LoadScene("Title");
-        isCoroutine = false;
     }
 
     public void GameWin()
